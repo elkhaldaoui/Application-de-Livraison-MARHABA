@@ -1,0 +1,25 @@
+{
+  "name": "application-de-livraison-marhaba",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elkhaldaoui/Application-de-Livraison-MARHABA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elkhaldaoui/Application-de-Livraison-MARHABA/issues"
+  },
+  "homepage": "https://github.com/elkhaldaoui/Application-de-Livraison-MARHABA#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.6.5",
+    "mongose": "^0.0.2-security"
+  },
+  "description": ""
+}
