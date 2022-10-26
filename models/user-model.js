@@ -1,3 +1,4 @@
+const { type } = require('jquery')
 const mongoose = require ('mongoose')
 
 const userSchema = mongoose.Schema({
@@ -17,7 +18,12 @@ const userSchema = mongoose.Schema({
     password : {
         type: String,
         required: true,
+    },
+    role : { 
+        type :  mongoose.Schema.Types.ObjectId,
+        ref : 'Role',
     }
+    
 })
 
 module.exports = mongoose.model('Users', userSchema)
