@@ -1,8 +1,8 @@
 # 🔥OUSSAMA ELKHALDAOUI [LIVRAISON-MARHABA]🔥
------------------------- Dockerisation Project ------------------------
+----------------------- Dockerisation De Projet ------------------------ 
 Étape 1 : Installer Docker sur Windows.
-Étape 2 : Installer Wsl 2 avec Microsoft Store.
-Étape 3 : Installer Ubuntu avec Microsoft Store.
+Étape 2 : Installer Wsl app.
+Étape 3 : Installer Ubuntu.
 
 <!-- Les étapes pour back-end -->
 Étape 4-1 : Créer un Dockerfile.
@@ -11,8 +11,8 @@
         WORKDIR /app
         COPY package.json .
         RUN npm install
-        COPY . ./
-        EXPOSE 9001
+        COPY . .
+        EXPOSE 5000 || 5005
         CMD ["npm", "start"]
     ).
 Étape 4-2 : Créer un network, et lui donner le nom de livraison-marhaba-back-end-net.
@@ -46,4 +46,4 @@
 (docker build -t livraison-marhaba-front-end-docker:test .).
 
 Étape 5-2 : Exécutez un container basé sur cette image que vous venez de créer, nommez-le livraison-marhabafront-end- et faites-le utiliser avec le network livraison-marhabafront-end--net.
-(docker container run -d --name livraison-marhaba-front-end- -v ${pwd}:/app -v /app/node_modules --network livraison-marhaba-front-end-net -p 3000:3000 livraison-marhaba-front-end-docker:test).
+(docker container run -d --name livraison-marhaba-front-end- -v ${pwd}:/app -v /app/node_modules --network livraison-marhaba-app-backend -p 3000:3000 livraison-marhaba-front-end-docker:test).
